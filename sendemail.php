@@ -1,25 +1,14 @@
 <?php
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $to = $_POST["to"];
     $subject = $_POST["subject"];
     $message = $_POST["message"];
-
-    $mail = new PHPMailer(true);
-
-    try {
-        $mail->setFrom('hberon00@gmail.com'); // Change this to your email address
-        $mail->addAddress($to);
-        $mail->Subject = $subject;
-        $mail->Body = $message;
-
-        $mail->send();
+    $headers = "From: your_email@example.com"; // Change this to your email address
+$request = mail($to, $subject, $message, $headers);
+    if ($request)) {
         echo "Email sent successfully!";
-    } catch (Exception $e) {
-        echo "Email sending failed: " . $mail->ErrorInfo;
+    } else {
+        echo "Email sending failed." + "request: " $request + "to: " + $to  + "subject: " $subject + "message: " + $message ; 
     }
 }
 ?>
