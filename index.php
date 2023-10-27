@@ -305,16 +305,18 @@
     <div class="container">
         <h2>Send e-mail to hberon00@gmail.com:</h2>
 
-<form action="sendemail.php" method="post" enctype="text/plain">
-Name:<br>
-<input type="text" name="subject"><br>
-E-mail:<br>
-<input type="text" name="to"><br>
-Comment:<br>
-<input type="text" name="message" size="50"><br><br>
-<input type="submit" value="Send">
-<input type="reset" value="Reset">
-</form>
+        <form action="send_email.php" method="post">
+        <label for="to">To:</label>
+        <input type="email" name="to" required><br>
+
+        <label for="subject">Subject:</label>
+        <input type="text" name="subject" required><br>
+
+        <label for="message">Message:</label>
+        <textarea name="message" required></textarea><br>
+
+        <input type="submit" value="Send Email">
+    </form>
     </div>
 </section>
 
