@@ -306,16 +306,22 @@
         <h2>Send e-mail to hberon00@gmail.com:</h2>
 
         <form action="send_email.php" method="post">
+<div class = "form-group">
         <label for="to">To:</label>
-        <input type="email" name="to" required><br>
+        <input class="form-control" type="email" name="to" required><br>
+</div>
 
+<div class = "form-group">
         <label for="subject">Subject:</label>
-        <input type="text" name="subject" required><br>
+        <input class="form-control" type="text" name="subject" required><br>
+</div>
 
+<div class = "form-group">
         <label for="message">Message:</label>
-        <textarea name="message" required></textarea><br>
+        <textarea class="form-text" name="message" required></textarea><br>
+</div>
 
-        <input type="submit" value="Send Email">
+        <button class ="btn btn-primary" type="submit" >Send Email</button>
     </form>
     </div>
 </section>
