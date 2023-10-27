@@ -2,7 +2,6 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'vendor/autoload.php'; // Load PHPMailer library
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $to = $_POST["to"];
